@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import { Route, NavLink, useHistory } from 'react-router-dom';
+
+import Login from './components/Login';
 import './App.css';
 
 function App() {
+  const history = useHistory();
+
+  const onLogin = () => {
+    history.push("/friends");
+  }
+
   return (
     <div className="App">
+
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Auth Friends</h1>
+        <nav>
+          <NavLink to="/login">Login</NavLink>
+          <NavLink to="/friends">Friends</NavLink>
+        </nav>
       </header>
+
+      <div className="App-content">
+        <Route path="/login" exact>
+          <Login onSuccess={onLogin}/>
+        </Route>
+      </div>
+
+      <div className="App-backdrop" />
     </div>
   );
 }
