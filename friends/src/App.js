@@ -1,6 +1,8 @@
 import { Route, NavLink, useHistory } from 'react-router-dom';
 
 import Login from './components/Login';
+import FriendsList from './components/FriendsList';
+import PrivateRoute from './components/PrivateRoute';
 import './App.css';
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
         <Route path="/login" exact>
           <Login onSuccess={onLogin}/>
         </Route>
+
+        <PrivateRoute path="/friends" exact component={FriendsList}/>
       </div>
 
       <div className="App-backdrop" />
