@@ -12,12 +12,16 @@ export const axiosWithAuth = () => {
 		},
 		baseURL: BASE_URL,
 	})
-}
+};
 
 export const saveToken = (token) => {
 	localStorage.setItem(STORAGE_KEY, token);
-}
+};
 
-export const hasToken = (token) => {
+export const hasToken = () => {
 	return localStorage.getItem(STORAGE_KEY) !== null;
-}
+};
+
+export const removeToken = () => {
+	localStorage.removeItem(STORAGE_KEY);
+};

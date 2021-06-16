@@ -30,6 +30,14 @@
   font-size: 2em;
 }
 
+.App-header h1 a {
+  color: white;
+}
+
+.App-header h1 a:hover {
+  color: #d2e7ff;
+}
+
 .App-header a {
   display: inline-block;
   vertical-align: bottom;
@@ -51,6 +59,10 @@ body {
 
 .App-content, .App-backdrop {
   margin: 0em 4em;
+}
+
+.App-content p {
+  margin: 1em 4em;
 }
 
 .App-backdrop {
