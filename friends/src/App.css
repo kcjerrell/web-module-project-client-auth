@@ -1,0 +1,77 @@
+.App * {
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  color: white;
+  padding: 0em 4em;
+}
+
+.App-header h1 {
+  flex-grow: 1;
+  margin: 0;
+  font-size: 2em;
+}
+
+.App-header h1 a {
+  color: white;
+}
+
+.App-header h1 a:hover {
+  color: #d2e7ff;
+}
+
+.App-header a {
+  display: inline-block;
+  vertical-align: bottom;
+  flex-grow: 0;
+  color: #d2e7ff;
+  margin: 0;
+  font-size: 1.1em;
+  padding: 0em 0.4em;
+  text-decoration: none;
+}
+
+.App-header a:hover {
+  color: #61dafb;
+}
+
+body {
+  background-color: #aaaaaa;
+}
+
+.App-content, .App-backdrop {
+  margin: 0em 4em;
+}
+
+.App-content p {
+  margin: 1em 4em;
+}
+
+.App-backdrop {
+  position: absolute;
+  background-color: #dddddd;
+  margin: 0em 4em;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  z-index: -1;
+}
